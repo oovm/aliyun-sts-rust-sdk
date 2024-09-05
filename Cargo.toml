@@ -6,6 +6,7 @@ authors = ["Yuan YuQiang"]
 description = "A tiny lib for aliyun sts api"
 keywords = ["aliyun", "sts"]
 repository = "https://github.com/yuqiang-yuan/aliyun-sts-rust-sdk"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 chrono = "0.4.38"
