@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Yuan YuQiang"]
 description = "A tiny lib for aliyun sts api"
 keywords = ["aliyun", "sts"]
-repository = ""
+repository = "https://github.com/yuqiang-yuan/aliyun-sts-rust-sdk"
 
 [dependencies]
 chrono = "0.4.38"
