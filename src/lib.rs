@@ -95,10 +95,23 @@ pub struct StatementBlock {
 #[derive(Serialize)]
 pub struct Policy {
     #[serde(rename = "Version")]
-    version: Versions,
+    pub version: Versions,
 
     #[serde(rename = "Statement")]
-    statement: Vec<StatementBlock>,
+    pub statement: Vec<StatementBlock>,
+}
+
+impl Policy {
+    /// 使用 Version1 创建一个 `Policy`。
+    pub fn v1<I>(stmts: I) -> Policy
+    where
+        I: IntoIterator<Item = StatementBlock>,
+    {
+        Self {
+            version: Versions::V1,
+            statement: stmts.into_iter().collect(),
+        }
+    }
 }
 
 /// AssumeRole 请求体
